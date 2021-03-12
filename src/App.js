@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {Button} from "./components/Button";
 import {Input} from "./components/Input";
 import {ClearButton} from "./components/ClearButton";
-import * as math from 'mathjs';
+
 
 class App extends Component{
   constructor(props){
@@ -18,7 +18,7 @@ class App extends Component{
   };
 
   handleEqual = () => {
-    this.setState({ input:math.evaluate(this.state.input) })
+    this.setState({ input:eval(this.state.input) })
   }
 
   render(){
